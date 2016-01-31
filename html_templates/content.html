@@ -1,7 +1,72 @@
 {% extends "base.html" %}
 {% block content %}
 
+<div class="content1">
+    <h2>OOP, Abstraction, Classes:</h2>
+        <p><b>OOP stands for Object Oriented Programming.</b> This is programming that is done based on "objects". These objects contain data (which can called attributes) and code which can be known as procedures or methods. Some of the programming languages that use OOP is Python, JAVA, C++, and Peri.
+        </p>
+        <p><b>Abstraction</b> is the hiding of details of programs or object modules that already exist and are being brought into a program that is being written. There are a number of existing objects that can be brought into a program that performs a variety of things. This will prevent you from having to recode things which have already been done. To find a list of existing programs (or objects) to import into Python programs you can check the Python Standard Library documentation. In order to use these programs (objects) and import statement will need to be used at the beginning of the program. Examples would be 'import time' and 'import os'.
+        </p>
+        <p><b>Classes</b>are a way to group like items together. The class contains common attributes of the items and functions that can be used by all items in that class. It is like a blueprint that contains certain pieces of information about the class. An Instance (or object) of a class is a copy of that class. When designing a class you first need to list the things that are needed by that class also which functions that may need to be set up within the class. All variables that are to be used by instances (or copies) needs to begin with 'self.' It could begin with any word but self is the recommended name. When 'self.' is used then it is considered to be an Instance Constructor. If this is not part of the variable name then it is considered an internal variable and could not be used in the instances of that class. Each class has a 'def __init__' and each instance variable would be defined in this statement. When a double underscore is used at the before and after a word (as with __init___) this means it is a reserve word. The variables that are used with each Instance is known as an Instance Variable. Also methods that are used with each Instance is known as an Instance Method. There are also variables within a class that is known as a Class Variable. This is a variable in which the value of that variable is the same for instances. The Class Variable is defined outside of the 'def __init__' statement. When the values of a variable is constant and is rarely changed it is recommended that the entire name be put in capital letters. All classes have predefined variables. You do not have to define them in order to use them. These predefined variables are __doc__, __name__, __module__, __dict__, and __bases__. These provide information about the class itself. Each is preceded and followed by double underscores. It is possible for a class to use attributes found in another class. This allows code to be reused and it is not necessary to keep on redefining the same variables. This is known as Inheritance. The class that originally contains the attributes is known as the parent. The class that is using those attributes is known as the child. If the same Method (or function) is found in both the parent and child then the version of the method in the child will override the version of the method in the parent.
+        </p>
+</div>
 
+<div class= "content2">
+    <h2>App Engine, Validation, String Substitution, HTML Escaping, Redirection:</h2>
+        <p><b>The App Engine</b> mentioned here is the Google App Engine or GAE is a computing platform that allows developing and hosting of web applications. It can be used for free up to a certain point and is mainly used for development. To use it you need to import webapp2 into your program. Webapp2 is a generic web handler program used by google. There are several methods that can be used when writing web applications but the main ones we will be working with is 'Get' or 'Post'. 'Get' is used to retrieve documents and 'Post' is used to update data. If a method is not specified then the default method is used which is 'Get'. Some of the features of the 'Get' method are: used for fetching documents, it has a maximum URL length, it is okay to cache, and you should not change or reroute the servers. Some of the features of the 'Post' method are: used for updating data, it has not maximum URL length, it is not okay to cache, and it is okay to change or reroute the server.
+        </p>
+        <p><b>Validation</b> is when data is checked to make sure it valid and will not cause harm to the application. Validation is expected to be done on the server side when the request is received. Also there is certain types of coding that should never be done so as to prevent accidently causing harm. There should never be links that can be used to update documents. A browser may accidently access one of these links and either erronously change a document or delete it. Forms should always be used when making changes to documents and there should always be logic to verify the validity of the data entered. This does not mean the data must be truthful but that the data entered must be in the range of what is expected. The user experience is also affected by validation. If the data is not validated and the results contains errors then the user will have a bad experince and may not get what he/she is looking for or expecting. With validation the user may receive an error message but this will give the user a chance to correct the error and provide the correct information. This will lead to a positive experience for the user.
+        </p>
+        <p><b>String Substitution</b> is a way to use the same string multiple times but change the content to what is needed at the time the string is used. To identify the place the substitution is to be made in the string the code '%s' or '%(name)s' is used. There are several ways string subsitution can be done. There can be a single substitution with one variable, multiple substitutions with multiple variables, or use a variable multiple times or using alot of variables then use a dictionary that maps the name to the value. Examples of each type is given below.
+        </p>
+        <br>Single variable in a string:
+        </br>
+        <br>a="some bold text"
+        <br>"You need to print %s."
+        <br>%a The result would be "You need to print some bold text."</br>
+        <br>Multiple variables in a string:
+        </br>
+        <br>var1="cat"
+        <br>var2="Mandy"
+        <br>"I have a %s with the name of %s" %(var1,var2)
+        <br>The results would be "I have a cat with the name of Mandy"
+        <p>Using a dictionary to map the variable and its value in a string: given_string = "I'm %(nickname)s. My real name is %(name)s, but my friends call me %(nickname)s."given_string2 % {"nickname":Goose, "name":Mike} The result would be "I'm Goose. My real name is Mike but my friends call me Goose.
+        <p>There are times when symbols used in HTML coding could be accidently or on purpose entered in a request. This could cause unexpected results. You should always use HTML Escaping which allows you to escape or change certain characters. Instead of writing your own code it is best to import cgi which will do the same thing. This will prevent the entered characters from causing any harm to the programs. When sending responses to request Redirection should be used. This allows a page to be reloaded or a successful link to be sent. Without redirection the original form would have to be resubmitted. Also the individual receiving the response would not have a valid URL address that they may need for reference.
+        </p>
+</div>
+<div class = "content3">
+    <h2>HTML Templates:</h2>
+        <p>HTML Template is the pattern or outline of a web page or a section of it. It is built with generic information so it can be easily reused. Templates can separate different types of code. It makes more readable code and more secure websites. Also the HTML is easier to modify since the majority is kept separate from the rest of the code and would be found in a separate file. Some helpful hints when dealing with templates is to always automatically escape variables when possible, minimize the code in the templates, and minimize HTML in the code. It is possible to use multiple templates within one web page. There could be one main template and subtemplates. The main template would then use a specific subtemples based on what has been coded. Template Inheritance involves using a main templates and subtemplates. Templates are kept in template libraries which are libraries used to build complicated strings (HTML). There are several different types of languages that are used to build templates. The one used the GAE is Jinja2. To know how to use Jinja2 will need to reference the manuals.
+        </p>
+        <p>Here are some of the rules for coding in Jinja2. All of the Jinja2 code is enclosed in a curly bracket ({) followed by a percent sign (%) at the beginning and and a percent sign (%) followed by a curly bracket (}) the end of the code. To do variable substitution the variable name needs to be enclosed in double opening ({) and closing (})curly brackets. Most of the statement groups has a starting statement and an ending statement. While Python does not need these Jinja2 does. If it is a statement it would have 'statement' at the beginning and 'end statement ' at the end. 'If' code would begin with 'if' and close with 'endif'. 'For' code would begin with 'for statement' and end with 'endfor'. You need to remember if your code needs to work with an integer then your need to change it to one since the parm variable will always be treated as a string. To do this your will need to add code similiar to this. If 'n' is the variable then "n = int(n)". There are a lot of filters that can be used in Jinja2. Two of them are '|escape' which will not process HTML code and '|safe' which will allow the HTML code to be processed.
+        </p>
+        <p>One of the main things to remember is to avoid repetition where at all possible. One way is to create common routines and then call or perform those routines whenever they are needed. Anther way is to create HTML templates that can be used repeatable. An example would be a template that can be used to enter comments / suggestions. If your website has a need to have comments / suggestions then all you would have to do is add this template to your website without having to write a comments / suggestions routine from scratch. This will save time not only in coding but in debugging.
+        </p>
+ </div>
+ <div class = "content4">
+    <h2>Databases, Miscellaneous Info:</h2>
+        <p>A function that can be useful to get a random integer or even a random word is randint (low,high). You provide the low and high values when calling it and it will return a value between those numbers. To use this you will need to add the following to your program - 'from randon import randint'. You can create a list of characters from a string using the 'split' function. An example would be 'string_to_split.split(seperator). This will create a list with each character seperated. If you do not use 'seperator' but leave it blank then it will return a list of single words. You can also take a list of characters or words and use the join function (.join()) to create a string. If you want the user to enter something and use that in your program you can use the function raw_input. This will bring in the response in a string for processing.
+        </p>
+        <p><b>Databases</b> are programs or the machine or machines running the programs that stores and retrieves large amounts of data. There are several different types of databases. There is not any that are better than the others. It all depends on what the data is being used for and how large the amount of data is. There is the Relational (SQL) database which is what is used in most mainframe programs and also in web applications. SQL stands for Structural Query Language and was invented in the 1970s. It allows the user to select information from table or tables by checking selected columns of data and specifing what to look for. In mainframe programs joining two or more tables is not unusual but joins are seldom done in web applications. There is the Google App Engine Datastore which is used by the GAE. It does have tables with entities but not every entity has the same columns of data even if they are the same type. All entities have an ID field. There are also parents / ancestors relationships to other entities. Some other types of databases are Amazon Dynamo and NoSQL. Databases can have indexes which can be used to increase the speed of queries. There are several types of indexes available. The Hashtable index is not sorted and stays constant. The Tree index is sorted but lookups can be slower and time needing to find information could increase depending on the size and how it is indexed. Another concept dealing databases is ACID. This stands for four things to keep in mind when dealing with databases. Atomicity in which all parts of a transaction succeed or fail together. Consistency where the database will always be consistent. Isolation in which no transactions can interfere with another transaction. Durabiity that once the transaction is committed it will not be lost.
+        </p>
+</div>
+
+
+<div class = "commend">
+    <form action="/sign" method="post">
+        <h2>Feel free to leave me commend or feedback =)</h2><br>
+        <div class="logic"><h3><a href="{{ url }}">{{ url_linktext }}</a></h3></div>
+        <h3>commend:</h3>
+        <div class="content"><textarea name="content" rows="3" cols="60"></textarea></div>
+        <h3>age:</h3>
+        <textarea name="age" rows="1" cols="10"></textarea>
+        <input type="submit" value="Sign Guestbook">
+    </form>
+</div>
+
+
+<div class = "git test">
+
+</div>
 
 {% endblock %}
-
