@@ -1,6 +1,5 @@
 {% extends "base.html" %}
 {% block content %}
-
 <div class="content1">
     <h2>OOP, Abstraction, Classes:</h2>
         <p><b>OOP stands for Object Oriented Programming.</b> This is programming that is done based on "objects". These objects contain data (which can called attributes) and code which can be known as procedures or methods. Some of the programming languages that use OOP is Python, JAVA, C++, and Peri.
@@ -50,20 +49,6 @@
         <p><b>Databases</b> are programs or the machine or machines running the programs that stores and retrieves large amounts of data. There are several different types of databases. There is not any that are better than the others. It all depends on what the data is being used for and how large the amount of data is. There is the Relational (SQL) database which is what is used in most mainframe programs and also in web applications. SQL stands for Structural Query Language and was invented in the 1970s. It allows the user to select information from table or tables by checking selected columns of data and specifing what to look for. In mainframe programs joining two or more tables is not unusual but joins are seldom done in web applications. There is the Google App Engine Datastore which is used by the GAE. It does have tables with entities but not every entity has the same columns of data even if they are the same type. All entities have an ID field. There are also parents / ancestors relationships to other entities. Some other types of databases are Amazon Dynamo and NoSQL. Databases can have indexes which can be used to increase the speed of queries. There are several types of indexes available. The Hashtable index is not sorted and stays constant. The Tree index is sorted but lookups can be slower and time needing to find information could increase depending on the size and how it is indexed. Another concept dealing databases is ACID. This stands for four things to keep in mind when dealing with databases. Atomicity in which all parts of a transaction succeed or fail together. Consistency where the database will always be consistent. Isolation in which no transactions can interfere with another transaction. Durabiity that once the transaction is committed it will not be lost.
         </p>
 </div>
-
-
-<div class = "commend">
-    <form action="/sign" method="post">
-        <h2>Feel free to leave me commend or feedback =)</h2><br>
-        <div class="logic"><h3><a href="{{ url }}">{{ url_linktext }}</a></h3></div>
-        <h3>commend:</h3>
-        <div class="content"><textarea name="content" rows="3" cols="60"></textarea></div>
-        <h3>age:</h3>
-        <textarea name="age" rows="1" cols="10"></textarea>
-        <input type="submit" value="Sign Guestbook">
-    </form>
-</div>
-
 
 <div class = "git test">
 

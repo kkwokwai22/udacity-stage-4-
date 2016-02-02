@@ -31,7 +31,8 @@ class MainPage(webapp2.RequestHandler):
     guestbook_name = self.request.get('guestbook_name')
     greetings_query = Greeting.all().ancestor(
         _GuestbookKey(guestbook_name)).order('-date')
-    greetings = greetings_query.fetch(5)
+    batch = 5
+    greetings = greetings_query.fetch(batch)
 
     if users.get_current_user():
       url = users.create_logout_url(self.request.uri)
@@ -44,6 +45,7 @@ class MainPage(webapp2.RequestHandler):
         'greetings': greetings,
         'url': url,
         'url_linktext': url_linktext,
+        'error': self.request.get('error')
     }
 
     template = jinja_env.get_template('content.html')

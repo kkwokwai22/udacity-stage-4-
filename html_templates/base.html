@@ -1,6 +1,4 @@
-{% extends "base.html" %}
-{% block content %}
-
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -26,9 +24,18 @@
 {% block content %}
 {% endblock %}
 
-
-    <br>
-    <br>
+<div> class = "commend">
+    <form action="/sign" method="post">
+        <h2>Feel free to leave me commend or feedback =)</h2><br>
+        <div class="logic"><h3><a href="{{ url }}">{{ url_linktext }}</a></h3></div>
+        <h3>commend:</h3>
+        <div class="content"><textarea name="content" rows="3" cols="60"></textarea></div>
+        <h3>age:</h3>
+        <textarea name="age" rows="1" cols="10"></textarea>
+        <input type="submit" value="Sign Guestbook">
+    </form>
+<br>
+<br>
     {% for greeting in greetings %}
       {% if greeting.author %}
         <b>{{ greeting.author }}</b>{{ greeting.age }}wrote:
@@ -37,10 +44,9 @@
       {% endif %}
         <blockquote>{{ greeting.content }}</blockquote>
     {% endfor %}
-{% endblock %}
-
+</div>
 </body>
-
 </html>
+
 
 
