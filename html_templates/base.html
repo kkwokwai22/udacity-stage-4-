@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
     <meta charset="UTF-8">
     <title>Kevin's Intro to Programming</title>
@@ -9,22 +10,21 @@
 </head>
 
 <body>
-<div class = "banner">
-<h1><marquee>Kevin's Udacity project</marquee></h1>
-</div>
-<div class="header">
+    <div class = "banner">
+    <h1><marquee>Kevin's Udacity project</marquee></h1>
+    </div>
+    <div class="header">
     <div class="image">
         <img src=https://myavantiservices.files.wordpress.com/2015/02/helloworld.gif alt="helloworld"/>
     </div>
     <div class="banner">
        Kevin's understanding on programming
     </div>
-</div>
+    </div>
 
-{% block content %}
-{% endblock %}
-
-<div> class = "commend">
+    <div class = "commend">
+    {% block content %}
+    {% endblock %}
     <form action="/sign" method="post">
         <h2>Feel free to leave me commend or feedback =)</h2><br>
         <div class="logic"><h3><a href="{{ url }}">{{ url_linktext }}</a></h3></div>
@@ -34,8 +34,11 @@
         <textarea name="age" rows="1" cols="10"></textarea>
         <input type="submit" value="Sign Guestbook">
     </form>
-<br>
-<br>
+    {% if error %}
+    <p style="color: red;">{{ error }}</p>
+    {% endif %}
+    <br>
+    <br>
     {% for greeting in greetings %}
       {% if greeting.author %}
         <b>{{ greeting.author }}</b>{{ greeting.age }}wrote:
@@ -44,7 +47,7 @@
       {% endif %}
         <blockquote>{{ greeting.content }}</blockquote>
     {% endfor %}
-</div>
+    </div>
 </body>
 </html>
 

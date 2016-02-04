@@ -68,11 +68,14 @@ class Guestbook(webapp2.RequestHandler):
 
     greeting.age = self.request.get('age')
     greeting.content = self.request.get('content')
-    greeting.put()
-    self.redirect('/?' + urllib.urlencode({'guestbook_name': guestbook_name}))
+    if greeting.content.strip() and greeting.age.isdigit():
+      greeting.put()
+      self.redirect('/?' + urllib.urlencode({'guestbook_name': guestbook_name}) + '#comments')
+    else:
+      error = 'Enter text for commend and positive whole number for age.'
+      self.redirect('/?' + urllib.urlencode({'guestbook_name': guestbook_name, 'error': error}) + '#comments')
 
-
-APP = webapp2.WSGIApplication([
+app = webapp2.WSGIApplication([
     ('/', MainPage),
     ('/sign', Guestbook),
 ], debug=True)
