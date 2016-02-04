@@ -33,15 +33,32 @@
         </p>
 </div>
 <div class = "content3">
-    <h2>HTML Templates:</h2>
-        <p>HTML Template is the pattern or outline of a web page or a section of it. It is built with generic information so it can be easily reused. Templates can separate different types of code. It makes more readable code and more secure websites. Also the HTML is easier to modify since the majority is kept separate from the rest of the code and would be found in a separate file. Some helpful hints when dealing with templates is to always automatically escape variables when possible, minimize the code in the templates, and minimize HTML in the code. It is possible to use multiple templates within one web page. There could be one main template and subtemplates. The main template would then use a specific subtemples based on what has been coded. Template Inheritance involves using a main templates and subtemplates. Templates are kept in template libraries which are libraries used to build complicated strings (HTML). There are several different types of languages that are used to build templates. The one used the GAE is Jinja2. To know how to use Jinja2 will need to reference the manuals.
+    <h2>HTML Templates/avoid repetition:</h2>
+        <p><b>HTML Template</b> is the pattern or outline of a web page or a section of it. It is built with generic information so it can be easily reused. Templates can separate different types of code. It makes more readable code and more secure websites. Also the HTML is easier to modify since the majority is kept separate from the rest of the code and would be found in a separate file. Some helpful hints when dealing with templates is to always automatically escape variables when possible, minimize the code in the templates, and minimize HTML in the code. It is possible to use multiple templates within one web page. There could be one main template and subtemplates. The main template would then use a specific subtemples based on what has been coded. Template Inheritance involves using a main templates and subtemplates. Templates are kept in template libraries which are libraries used to build complicated strings (HTML). There are several different types of languages that are used to build templates. The one used the GAE is Jinja2. To know how to use Jinja2 will need to reference the manuals.
         </p>
         <p>Here are some of the rules for coding in Jinja2. All of the Jinja2 code is enclosed in a curly bracket ({) followed by a percent sign (%) at the beginning and and a percent sign (%) followed by a curly bracket (}) the end of the code. To do variable substitution the variable name needs to be enclosed in double opening ({) and closing (})curly brackets. Most of the statement groups has a starting statement and an ending statement. While Python does not need these Jinja2 does. If it is a statement it would have 'statement' at the beginning and 'end statement ' at the end. 'If' code would begin with 'if' and close with 'endif'. 'For' code would begin with 'for statement' and end with 'endfor'. You need to remember if your code needs to work with an integer then your need to change it to one since the parm variable will always be treated as a string. To do this your will need to add code similiar to this. If 'n' is the variable then "n = int(n)". There are a lot of filters that can be used in Jinja2. Two of them are '|escape' which will not process HTML code and '|safe' which will allow the HTML code to be processed.
         </p>
         <p>One of the main things to remember is to avoid repetition where at all possible. One way is to create common routines and then call or perform those routines whenever they are needed. Anther way is to create HTML templates that can be used repeatable. An example would be a template that can be used to enter comments / suggestions. If your website has a need to have comments / suggestions then all you would have to do is add this template to your website without having to write a comments / suggestions routine from scratch. This will save time not only in coding but in debugging.
-        </p>
- </div>
- <div class = "content4">
+        <p><b>Avoid repetition</b></p>
+        <ol>
+            <li>Repetition makes it difficult to update code, because changes have to be made in several places and it's easy to lose track of where all they have to be made.</li>
+            <li>Repetition increases the length of your codebase and makes it more cluttered (and possibly more intimidating). Hence avoiding it improves readability.</li>
+            <li>Avoiding repetition usually leads to encapsulating that snippet of code in a function, which abstracts it from the programmer.</li>
+        </ol>
+</div>
+<div class = "content4">
+    <h2>Server:</h2>
+    <p>A <b>server</b> is a computer that hosts information such as web apps. Your web browser makes GET and POST requests when it communicates with the server. A GET request handles parameters in the URL and typically is used for fetching documents. It is okay to cache and it does not change the server in any way. A POST request is used for updating data and as a result changes the server. You do not typically cache POST requests. After a server recieves a request, it will return a response. There are several types of responses:
+        <ol>
+            <li>a request was recieved, continuing process</li>
+            <li>the action requested was recieved, accepted and processed successfully</li>
+            <li>redirects the client to another location</li>
+            <li>an error occurred on the client side</li>
+            <li>an error occurred on the server side</li>
+        </ol>
+    </p>
+</div>
+ <div class = "content5">
     <h2>Databases, Miscellaneous Info:</h2>
         <p>A function that can be useful to get a random integer or even a random word is randint (low,high). You provide the low and high values when calling it and it will return a value between those numbers. To use this you will need to add the following to your program - 'from randon import randint'. You can create a list of characters from a string using the 'split' function. An example would be 'string_to_split.split(seperator). This will create a list with each character seperated. If you do not use 'seperator' but leave it blank then it will return a list of single words. You can also take a list of characters or words and use the join function (.join()) to create a string. If you want the user to enter something and use that in your program you can use the function raw_input. This will bring in the response in a string for processing.
         </p>
