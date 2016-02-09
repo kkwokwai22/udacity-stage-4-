@@ -1,4 +1,5 @@
 import urllib
+import urllib2
 import webapp2
 
 from google.appengine.ext import db
@@ -6,6 +7,7 @@ from google.appengine.api import users
 
 import jinja2
 import os
+
 
 template_directory = os.path.join(os.path.dirname(__file__), 'html_templates')
 jinja_env = jinja2.Environment(loader = jinja2.FileSystemLoader(template_directory),
