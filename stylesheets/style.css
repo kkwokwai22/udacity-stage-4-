@@ -1,59 +1,21 @@
-.image{background-color: grey;
-       display: block;
-       text-align: center;
+.image{margin: 40px 0px 0px 0px;
+		border: 7px solid white; 
+		border-radius: 10px;
+		background-size: cover;
        }
+	   
+.header{background: url("https://upload.wikimedia.org/wikipedia/commons/a/a9/Hong_Kong_Night_view.jpg");
+		background-size: cover; 
+		text-align: center;
+		padding: 120px;
+		}	
 
-.banner{color: white;
-	      background-color: black;
-	      padding: 1%;
-	      font-size: 30px;
+}	
+.banner1{color: white;
+		text-align: center;
         }
+
 		
-.navbar a {
-	background-color: #294860;
-	border-radius: 5px;
-	font-family: arial,helvetica,sans-serif;
-	font-size: 16px;
-	font-weight: 400;
-	color: #ffffff;
-	text-decoration: underline;
-	padding-left: 10px;
-	padding-top: 5px;
-	padding-right: 10px;
-	padding-bottom: 5px;
-
-}
-
-.navbar .navbarb {
-	background-color: #294860;
-	border-radius: 5px;
-	font-family: arial,helvetica,sans-serif;
-	font-size: 16px;
-	font-weight: 400;
-	color: #222222;
-	text-decoration: underline;
-	padding-left: 10px;
-	padding-top: 5px;
-	padding-right: 10px;
-	padding-bottom: 5px;
-
-}
-
-.navbar #aaa {
-	background-color: #294860;
-	border-radius: 5px;
-	font-family: arial,helvetica,sans-serif;
-	font-size: 16px;
-	font-weight: 400;
-	color: #999999;
-	text-decoration: underline;
-	padding-left: 10px;
-	padding-top: 5px;
-	padding-right: 10px;
-	padding-bottom: 5px;
-
-}
-
 .content1{background-color: #3399ff;
 	       border-radius: 20px;
 	       color: white;
@@ -89,9 +51,15 @@
 	        margin: 10px auto;
           }
 
-.commend{background-color: black;
-          border-radius: 20px;
+.logic{ background: red;
+		color:white;
+		border: 0;
+		font-size: 10px;
+		}		  
+		  
+.comment{background-color: black;
+		  border: 0;
 	        color: white;
-	        padding: 10px;
+	        padding: 20px;
 	        margin: 10px auto;
          }

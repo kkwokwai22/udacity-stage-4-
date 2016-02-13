@@ -74,7 +74,7 @@ class Guestbook(webapp2.RequestHandler):
       greeting.put()
       self.redirect('/?' + urllib.urlencode({'guestbook_name': guestbook_name}) + '#comments')
     else:
-      error = 'Enter text for commend and positive whole number for age.'
+      error = 'Enter text for comment and positive whole number for age.'
       self.redirect('/?' + urllib.urlencode({'guestbook_name': guestbook_name, 'error': error}) + '#comments')
 
 app = webapp2.WSGIApplication([
