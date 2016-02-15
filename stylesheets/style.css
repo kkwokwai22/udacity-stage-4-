@@ -1,26 +1,37 @@
-.image{margin: 40px 0px 0px 0px;
-		border: 7px solid white; 
-		border-radius: 10px;
-		background-size: cover;
+.image{
        }
 	   
-.header{background: url("https://upload.wikimedia.org/wikipedia/commons/a/a9/Hong_Kong_Night_view.jpg");
+.header{
+		background: url("https://upload.wikimedia.org/wikipedia/commons/a/a9/Hong_Kong_Night_view.jpg");
 		background-size: cover; 
 		text-align: center;
-		padding: 120px;
+		padding: 150px;
 		}	
 
-}	
-.banner1{color: white;
-		text-align: center;
-        }
 
+.banner1{color: #3399ff;
+        background: rgba(0,0,0,0.5);
+		background-size: cover;
+		font-size: 18px;
+		display: inline;
+		}
 		
-.content1{background-color: #3399ff;
+body {background-color: #FAF0E6;
+	  text-align:justify;
+}
+		
+h1 {font-family: 'Londrina Shadow', cursive;
+	font-size: 75px;
+	text-align: center;
+	margin: 60px 0 0 0;
+	color: #aaaaaa;}
+		
+.content1 {background-color: #3399ff;
 	       border-radius: 20px;
 	       color: white;
-	       padding: 10px;
-         margin: 10px auto;
+		   padding: 10px;
+	       margin: 10px auto;
+		   margin: 0 auto;
          }
 
 .content2{background-color: #00A4B9;
@@ -63,3 +74,5 @@
 	        padding: 20px;
 	        margin: 10px auto;
          }
+		 
+@media (max-width: 500px)
